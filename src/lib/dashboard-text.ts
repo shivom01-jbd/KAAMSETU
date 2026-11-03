@@ -1,0 +1,56 @@
+import type { Locale } from "./i18n/messages";
+
+const en = {
+  title: "Dashboard",
+  pending: "Pending requests",
+  active: "Active jobs",
+  doneMonth: "Completed this month",
+  doneTotal: "Completed in total",
+  rating: "Your rating",
+  noRating: "No reviews yet",
+  myActive: "Active bookings",
+  myDone: "Completed bookings",
+  available: "You are available for work",
+  unavailable: "You are marked as busy",
+  makeBusy: "Mark me as busy",
+  makeAvailable: "Mark me as available",
+  earningsTitle: "Earnings",
+  earningsNote:
+    "Earnings are not shown yet. They need an agreed price on each job and a payment system, and showing numbers entered by users would not be trustworthy.",
+  findPros: "Find professionals",
+  bookings: "Bookings",
+  jobRequests: "Job requests",
+  messages: "Messages",
+  adminPanel: "Admin panel",
+  profile: "Profile and settings",
+  needsSupabase: "The dashboard needs a configured Supabase project.",
+  failed: "Could not update. Try again.",
+} as const;
+const hi: Record<keyof typeof en, string> = {
+  title: "डैशबोर्ड",
+  pending: "नए अनुरोध",
+  active: "चालू काम",
+  doneMonth: "इस महीने पूरे हुए",
+  doneTotal: "कुल पूरे हुए",
+  rating: "आपकी रेटिंग",
+  noRating: "अभी कोई रिव्यू नहीं",
+  myActive: "चालू बुकिंग",
+  myDone: "पूरी हुई बुकिंग",
+  available: "आप काम के लिए उपलब्ध हैं",
+  unavailable: "आप व्यस्त चिह्नित हैं",
+  makeBusy: "मुझे व्यस्त करें",
+  makeAvailable: "मुझे उपलब्ध करें",
+  earningsTitle: "कमाई",
+  earningsNote:
+    "कमाई अभी नहीं दिखाई जाती। इसके लिए हर काम का तय दाम और भुगतान की व्यवस्था चाहिए। यूज़र के खुद डाले आंकड़े भरोसेमंद नहीं होते।",
+  findPros: "प्रोफेशनल खोजें",
+  bookings: "बुकिंग",
+  jobRequests: "काम के अनुरोध",
+  messages: "संदेश",
+  adminPanel: "एडमिन पैनल",
+  profile: "प्रोफाइल और सेटिंग",
+  needsSupabase: "डैशबोर्ड के लिए Supabase प्रोजेक्ट सेट होना चाहिए।",
+  failed: "अपडेट नहीं हो पाया। फिर कोशिश करें।",
+};
+export type DashboardText = Record<keyof typeof en, string>;
+export const dashboardText: Record<Locale, DashboardText> = { en, hi };
